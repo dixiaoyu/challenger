@@ -1,9 +1,6 @@
 Challenger::Application.routes.draw do
-  get "crm_member_lists/new"
+  resources :crm_member_lists
 
-  get "crm_member_lists/show"
-
-  get "crm_member_lists/edit"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -54,7 +51,7 @@ Challenger::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'crm_member_lists#index'
 
   # See how all your routes lay out with "rake routes"
 
